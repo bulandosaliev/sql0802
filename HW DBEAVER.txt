@@ -1,0 +1,41 @@
+create table visitors (id integer primary key,FIO varchar(50), date_of_birth varchar (10), gender varchar(6));
+
+create table visits (id integer primary key, time_of_visit varchar (16),visitors_id integer references visitors(id) unique, trainers_id integer references trainers (id) unique);
+
+insert into visitors(id, FIO,date_of_birth, gender)
+values(1, 'Shukur Ali', '25.05.12', 'male');
+
+insert into visitors(id, FIO,date_of_birth, gender)
+values(2, 'Keneshpekova Meerim', '25.05.91', 'female');
+
+insert into visitors(id, FIO,date_of_birth, gender)
+values(3, 'Baizakov Aziz', '25.05.89', 'male');
+
+insert into visitors(id, FIO,date_of_birth, gender)
+values(4, 'Kupavcev Nikita', '25.05.95', 'male');
+
+insert into visitors(id, FIO,date_of_birth, gender)
+values(5, 'Murzaliev Toro', '25.05.96', 'male');
+
+
+
+insert into visits(id, time_of_visit,visitors_id,trainers_id)
+values(1, '14:00,10.02.2020',1,1 );
+
+insert into visits(id, time_of_visit,visitors_id,trainers_id)
+values(2, '15:00,10.02.2020',2,2 );
+
+insert into visits(id, time_of_visit,visitors_id,trainers_id)
+values(3, '16:00,10.02.2020',3,3 );
+
+insert into visits(id, time_of_visit,visitors_id,trainers_id)
+values(4, '17:00,10.02.2020',4,4 );
+
+insert into visits(id, time_of_visit,visitors_id,trainers_id)
+values(5, '18:00,10.02.2020',5,5 );
+
+
+
+
+
+ 
